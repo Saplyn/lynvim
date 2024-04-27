@@ -1,1 +1,1 @@
-require("profile.lynvim")
+require("lynvim")
