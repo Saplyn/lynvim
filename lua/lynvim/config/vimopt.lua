@@ -26,6 +26,15 @@ vim.opt.updatetime = 250 -- less update time
 vim.opt.timeoutlen = 300 -- less mapped seq wait time (which-key)
 vim.opt.breakindent = true -- indent perserving
 
+--~ Tab setting
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 --~ Whitespace char display
 vim.opt.list = true
 vim.opt.listchars = {
