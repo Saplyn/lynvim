@@ -22,4 +22,7 @@ require('lazy').setup({
 
   --~ Keybinding cheatsheet
   require 'plugin.which-key',
+
+  --~ Markdown peek
+  require 'plugin.peek',
 })

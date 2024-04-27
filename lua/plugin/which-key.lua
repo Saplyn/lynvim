@@ -8,7 +8,4 @@ return {
       ['<leader><tab>'] = { name = '[Tab]page', _ = 'which_key_ignore' },
     }
   end,
-  cond = function()
-    return not vim.g.vscode
-  end,
 }
