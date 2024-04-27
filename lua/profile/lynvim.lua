@@ -11,6 +11,15 @@ vim.opt.rtp:prepend(lazypath)
 
 --~ Configure `lazy.nvim` plugins
 require('lazy').setup({
-  --~ auto detect tabstop and shiftwidth
+  --~ Auto detect tabstop and shiftwidth
   'tpope/vim-sleuth',
+
+  --~ NeoVim colorscheme
+  require 'plugin.theme',
+
+  --~ Neo-Tree file explorer
+  require 'plugin.neo-tree',
+
+  --~ Keybinding cheatsheet
+  require 'plugin.which-key',
 })
