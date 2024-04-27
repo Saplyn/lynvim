@@ -1,1 +1,1 @@
-require("lynvim")
+require 'lynvim'

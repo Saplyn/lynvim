@@ -1,5 +1,5 @@
-require("lynvim.config.vimopt")
-require("lynvim.config.keymap")
+require 'lynvim.config.vimopt'
+require 'lynvim.config.keymap'
 
 --~ Install `lazy.nvim` plugin manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -10,4 +10,4 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 --~ Configure `lazy.nvim` plugins
-require('lazy').setup("lynvim.plugin")
+require('lazy').setup 'lynvim.plugin'

@@ -10,15 +10,15 @@ return {
   },
   config = function()
     vim.keymap.set('n', '<leader>e', function()
-      require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
+      require('neo-tree.command').execute { toggle = true, dir = vim.uv.cwd() }
     end, { desc = 'NeoTree [E]xplorer (cwd)' })
 
-    require("neo-tree").setup({
+    require('neo-tree').setup {
       window = {
         mappings = {
-          ["<space>"] = "none",
-        }
-      }
-    })
+          ['<space>'] = 'none',
+        },
+      },
+    }
   end,
 }
