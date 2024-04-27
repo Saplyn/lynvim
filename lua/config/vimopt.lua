@@ -20,7 +20,6 @@ vim.opt.smartcase = true -- case-matter search if `\C` or `[A-Z]`
 vim.opt.inccommand = 'split' -- preview substitutions live
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>') -- <ECS> disable highlight search
 
 --? Idonno but just leave it
 vim.opt.updatetime = 250 -- less update time

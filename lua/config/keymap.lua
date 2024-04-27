@@ -1,3 +1,6 @@
+--~ <ECS> disable highlight search
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
 --~ Split navigation
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Go to Left Split' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Go to Lower Split' })
