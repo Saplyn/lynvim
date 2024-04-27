@@ -1,3 +1,4 @@
+-- TODO: remap key bingding
 --~ Language support: Language server protocal
 return {
   'neovim/nvim-lspconfig',
@@ -16,32 +17,29 @@ return {
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
-        local map = function(keys, func, desc)
-          vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+        local map = function(mode, keys, func, desc)
+          vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
         end
 
         -- Code quick navigation, <C-t> to jump back
-        map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-        map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-        map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-
-        -- Jump to the type definition
-        map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
+        map('n', 'gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
+        map('n', 'gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+        map('n', 'gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+        map('n', 'gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+        map('n', 'gy', require('telescope.builtin').lsp_type_definitions, '[G]oto T[y]pe Definition')
+        map('n', 'K', vim.lsp.buf.hover, 'Hover Documentation')
 
         -- Fuzzy find all the symbols in current document
-        map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+        -- map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 
         -- Fuzzy find all the symbols in current workspace
-        map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+        -- map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
         -- Refactor: rename variable
-        map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+        map({ 'n', 'v' }, '<leader>cr', vim.lsp.buf.rename, '[C]ode [R]ename')
 
         -- Execute a code action: apply quick fix or suggestion
-        map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-
-        map('K', vim.lsp.buf.hover, 'Hover Documentation')
-        map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+        map({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
         -- Cursor hover highlight references
         local client = vim.lsp.get_client_by_id(event.data.client_id)
@@ -130,8 +128,5 @@ return {
         end,
       },
     }
-  end,
-  cond = function()
-    return not vim.g.vscode
   end,
 }

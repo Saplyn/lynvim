@@ -1,3 +1,4 @@
+-- TODO: remap key bingding
 --~ Language support: Debug Adapter Protocal
 return {
   'mfussenegger/nvim-dap',
@@ -77,8 +78,5 @@ return {
 
     -- Install golang specific config
     require('dap-go').setup()
-  end,
-  cond = function()
-    return not vim.g.vscode
   end,
 }

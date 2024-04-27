@@ -23,7 +23,4 @@ return {
       -- javascript = { { "prettierd", "prettier" } },
     },
   },
-  cond = function()
-    return not vim.g.vscode
-  end,
 }

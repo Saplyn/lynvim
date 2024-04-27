@@ -54,14 +54,14 @@ return {
         ['<C-Space>'] = cmp.mapping.complete {}, -- Manually trigger completion
 
         -- move to the right of each of the expansion locations
-        ['<C-l>'] = cmp.mapping(function()
+        ['<M-l>'] = cmp.mapping(function()
           if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           end
         end, { 'i', 's' }),
 
         -- move to the left of each of the expansion locations
-        ['<C-h>'] = cmp.mapping(function()
+        ['<M-h>'] = cmp.mapping(function()
           if luasnip.locally_jumpable(-1) then
             luasnip.jump(-1)
           end
@@ -76,8 +76,5 @@ return {
         { name = 'path' },
       },
     }
-  end,
-  cond = function()
-    return not vim.g.vscode
   end,
 }
