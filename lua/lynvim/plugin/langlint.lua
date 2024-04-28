@@ -1,4 +1,3 @@
--- TODO: remap key bingding
 --~ Language support: Linter
 return {
   'mfussenegger/nvim-lint',
@@ -6,10 +5,7 @@ return {
   config = function()
     local lint = require 'lint'
     lint.linters_by_ft = {
-      markdown = { 'markdownlint', 'cspell' },
-      -- rust = { 'cspell' },
-      -- toml = { 'cspell' },
-      -- lua = { 'cspell' },
+      markdown = { 'markdownlint' },
     }
 
     -- To allow other plugins to add linters to require('lint').linters_by_ft,

@@ -1,4 +1,3 @@
--- TODO: remap key bingding
 --~ Language support: Language server protocal
 return {
   'neovim/nvim-lspconfig',

@@ -1,4 +1,3 @@
--- TODO: remap key bingding
 --~ Language support: Debug Adapter Protocal
 return {
   'mfussenegger/nvim-dap',
