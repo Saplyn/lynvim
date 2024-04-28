@@ -24,7 +24,7 @@ vim.opt.incsearch = true
 --? Idonno but just leave it
 vim.opt.updatetime = 250 -- less update time
 vim.opt.timeoutlen = 300 -- less mapped seq wait time (which-key)
-vim.opt.breakindent = true -- indent perserving
+vim.opt.breakindent = true -- indent preserving
 
 --~ Tab setting
 vim.opt.smartindent = true
@@ -51,3 +51,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+--~ Spell check
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
