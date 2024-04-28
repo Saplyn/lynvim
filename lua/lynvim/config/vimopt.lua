@@ -55,3 +55,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --~ Spell check
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
+
+--~ Vim diagnostic sign
+local signs = { Error = ' ', Warn = ' ', Hint = '󰌶 ', Info = '󰋽' }
+for type, icon in pairs(signs) do
+  local hl = 'DiagnosticSign' .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
