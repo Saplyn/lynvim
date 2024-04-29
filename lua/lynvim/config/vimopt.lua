@@ -13,6 +13,7 @@ vim.opt.mouse = 'a'
 vim.opt.clipboard = 'unnamedplus' -- os clipboard sync
 vim.opt.undofile = true -- president undo history
 vim.opt.scrolloff = 10 -- scroll padding
+vim.opt.wrap = false
 
 --~ Better search and replace
 vim.opt.ignorecase = true -- case-less search
