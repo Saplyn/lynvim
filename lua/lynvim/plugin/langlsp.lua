@@ -17,7 +17,7 @@ return {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
         local map = function(mode, keys, func, desc)
-          vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+          vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = desc .. '(LSP)' })
         end
 
         -- Code quick navigation, <C-t> to jump back

@@ -16,6 +16,6 @@ return {
       end
     end, {})
 
-    vim.keymap.set('n', '<leader>cp', '<cmd>PeekToggle<cr>', { desc = 'Peek: [C]ode [P]review Markdown' })
+    vim.keymap.set('n', '<leader>cp', '<cmd>PeekToggle<cr>', { desc = '[C]ode [P]review Markdown (Peek)' })
   end,
 }

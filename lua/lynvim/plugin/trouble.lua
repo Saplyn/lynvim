@@ -6,32 +6,32 @@ return {
     {
       '<leader>t',
       '<cmd>Trouble diagnostics toggle<cr>',
-      desc = '[T]rouble: Diagnostics',
+      desc = '[T]rouble Diagnostics',
     },
     {
       '<leader>xX',
       '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
-      desc = 'Trouble: [X] Buffer Diagnostics',
+      desc = '[X] Buffer Diagnostics (Trouble)',
     },
     {
       '<leader>cs',
       '<cmd>Trouble symbols toggle focus=false<cr>',
-      desc = 'Trouble: [C]ode [S]ymbols',
+      desc = '[C]ode [S]ymbols (Trouble)',
     },
     {
       '<leader>cl',
       '<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
-      desc = 'Trouble: [L]SP Definitions / references / ...',
+      desc = '[L]SP Definitions / references / ... (Trouble)',
     },
     {
       '<leader>xL',
       '<cmd>Trouble loclist toggle<cr>',
-      desc = 'Trouble: Location [L]ist',
+      desc = 'Location [L]ist (Trouble)',
     },
     {
       '<leader>xQ',
       '<cmd>Trouble qflist toggle<cr>',
-      desc = 'Trouble: [Q]uickfix List',
+      desc = '[Q]uickfix List (Trouble)',
     },
   },
   opts = {}, -- for default options, refer to the configuration section for custom setup.
