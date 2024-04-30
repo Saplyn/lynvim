@@ -22,6 +22,8 @@ return {
       window = {
         mappings = {
           ['<space>'] = 'none',
+          ['.'] = 'none',
+          ['^'] = 'set_root',
           ['<tab>'] = 'open_tabnew',
         },
       },
