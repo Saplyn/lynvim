@@ -13,11 +13,17 @@ return {
       require('neo-tree.command').execute { toggle = true, dir = vim.uv.cwd() }
     end, { desc = 'NeoTree [E]xplorer (cwd)' })
 
+    vim.keymap.set('n', '<leader>e', function()
+      require('neo-tree.command').execute { toggle = true, dir = vim.uv.cwd() }
+    end, { desc = 'NeoTree [E]xplorer (cwd)' })
+
     require('neo-tree').setup {
       auto_clean_after_session_restore = true,
       window = {
         mappings = {
           ['<space>'] = 'none',
+          ['t'] = 'none',
+          ['<tab>'] = 'open_tabnew',
         },
       },
       default_component_configs = {
