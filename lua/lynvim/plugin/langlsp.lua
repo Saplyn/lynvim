@@ -80,6 +80,32 @@ return {
       -- TypeScript
       tsserver = {},
 
+      -- HTML
+      html = {},
+
+      -- CSS
+      cssls = {},
+
+      -- Vue (TS & JS)
+      volar = {
+        -- https://www.reddit.com/r/neovim/comments/1bib0v3/help_vuelanguageserver_setup_with_kickstartmason/
+        filetypes = { 'vue', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
+        init_options = {
+          vue = {
+            hybridMode = false,
+          },
+          typescript = {
+            -- Global install of typescript
+            --tsdk = '~/.nvm/versions/node/v20.11.1/lib/node_modules/typescript',
+            -- Current project version and what I will likely use
+            tsdk = vim.fn.getcwd() .. 'node_modules/typescript/lib',
+          },
+        },
+      },
+
+      -- Shell
+      bashls = {},
+
       -- Lua
       lua_ls = {
         -- cmd = {...},
@@ -98,14 +124,14 @@ return {
 
     -- Ensure installed tools
     local tools = {
-      -- Spell check
-      'cspell',
-
       -- Lua
       'stylua', -- formatter
 
       -- Markdown
       'markdownlint', -- linter
+
+      -- Shell
+      'shellcheck',
     }
 
     -- Ensure the servers and tools above are installed
