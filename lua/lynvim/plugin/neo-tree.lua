@@ -24,7 +24,9 @@ return {
           ['<space>'] = 'none',
           ['.'] = 'none',
           ['^'] = 'set_root',
+          ['t'] = 'open',
           ['<tab>'] = 'open_tabnew',
+          ['<cr>'] = 'open_tabnew',
         },
       },
       default_component_configs = {
