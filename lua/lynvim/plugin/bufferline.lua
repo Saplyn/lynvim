@@ -7,6 +7,7 @@ return {
       options = {
         diagnostics = 'nvim_lsp',
         mode = 'tabs',
+        always_show_bufferline = false,
         diagnostics_indicator = function(_, _, diag)
           local icons = vim.g.diagnostics_signs
           local ret = (diag.error and icons.Error .. diag.error .. ' ' or '') .. (diag.warning and icons.Warn .. diag.warning or '')
