@@ -14,6 +14,8 @@ vim.keymap.set('n', '<leader><tab><tab>', '<cmd>tabnew<cr>', { desc = 'New [Tab]
 vim.keymap.set('n', '<leader><tab>d', '<cmd>tabclose<cr>', { desc = '[D] Close Tab' })
 vim.keymap.set('n', '<leader><tab>n', '<cmd>tabnext<cr>', { desc = '[N]ext Tab' })
 vim.keymap.set('n', '<leader><tab>p', '<cmd>tabprevious<cr>', { desc = '[P]revious Tab' })
+vim.keymap.set('n', '<leader>n', '<cmd>tabnext<cr>', { desc = '[N]ext Tab' })
+vim.keymap.set('n', '<leader>p', '<cmd>tabprevious<cr>', { desc = '[P]revious Tab' })
 
 --~ Move lines
 vim.keymap.set('n', '<A-j>', '<cmd>m .+1<cr>==', { desc = 'Move Line Down' })
