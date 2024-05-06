@@ -14,3 +14,5 @@ Utils
 NeoVim
 CMake
 Theming
+TUI
+Linter
