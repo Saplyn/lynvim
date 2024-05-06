@@ -132,6 +132,9 @@ return {
 
       -- Shell
       'shellcheck',
+
+      -- prettier
+      'prettier',
     }
 
     -- Ensure the servers and tools above are installed
