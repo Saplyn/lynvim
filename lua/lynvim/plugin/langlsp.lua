@@ -135,6 +135,7 @@ return {
 
       -- prettier
       'prettier',
+      'prettierd',
     }
 
     -- Ensure the servers and tools above are installed
