@@ -8,6 +8,7 @@ return {
     require('hardtime').setup {
       max_count = 4,
       disable_mouse = false,
+      allow_different_key = true,
       disabled_filetypes = { 'qf', 'netrw', 'neo-tree', 'lazy', 'mason', 'NeoTree', 'help' },
     }
   end,
