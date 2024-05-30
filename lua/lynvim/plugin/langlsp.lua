@@ -73,8 +73,10 @@ return {
 
       -- Rust
       rust_analyzer = {
-        checkOnSave = {
-          command = 'clippy',
+        init_options = {
+          check = {
+            command = 'clippy',
+          },
         },
       },
 
