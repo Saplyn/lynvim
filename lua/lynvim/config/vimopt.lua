@@ -5,7 +5,7 @@ vim.g.maplocalleader = ' '
 --~ Vim UI
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = 'yes:2' -- column sign
+vim.opt.signcolumn = 'yes:3' -- column sign
 vim.opt.cursorline = true -- highlight cursor current line
 
 --~ Quality of life
@@ -57,9 +57,14 @@ vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
 
 --~ Vim diagnostic sign
-vim.g.diagnostics_signs = { Error = ' ', Warn = ' ', Hint = '󰌶 ', Info = '󰋽 ' }
-local signs = vim.g.diagnostics_signs
-for type, icon in pairs(signs) do
-  local hl = 'DiagnosticSign' .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
+vim.g.diagnostics_signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = '󰋽 ' }
+vim.diagnostic.config {
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = vim.g.diagnostics_signs.Error,
+      [vim.diagnostic.severity.WARN] = vim.g.diagnostics_signs.Warn,
+      [vim.diagnostic.severity.HINT] = vim.g.diagnostics_signs.Hint,
+      [vim.diagnostic.severity.INFO] = vim.g.diagnostics_signs.Info,
+    },
+  },
+}

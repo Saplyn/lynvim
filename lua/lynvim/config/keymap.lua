@@ -26,7 +26,7 @@ vim.keymap.set('v', '<A-j>', ":m '>+1<cr>gv=gv", { desc = 'Move Line Down' })
 vim.keymap.set('v', '<A-k>', ":m '<-2<cr>gv=gv", { desc = 'Move Line Up' })
 
 --~ Quality of life
-vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Lossless [P]aste' })
+vim.keymap.set('v', '<leader>p', [["_dP]], { desc = 'Lossless [P]aste' })
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<cr>', { desc = '[Q]uit All' })
 
 --~ Resize window
@@ -34,6 +34,10 @@ vim.keymap.set('n', '<C-Up>', '<cmd>resize +2<cr>', { desc = 'Increase Window He
 vim.keymap.set('n', '<C-Down>', '<cmd>resize -2<cr>', { desc = 'Decrease Window Height' })
 vim.keymap.set('n', '<C-Left>', '<cmd>vertical resize -2<cr>', { desc = 'Decrease Window Width' })
 vim.keymap.set('n', '<C-Right>', '<cmd>vertical resize +2<cr>', { desc = 'Increase Window Width' })
+
+--~ Manage plugins
+vim.keymap.set('n', '<leader>ml', '<cmd>Lazy<cr>', { desc = '[L]azy.nvim' })
+vim.keymap.set('n', '<leader>mm', '<cmd>Mason<cr>', { desc = '[L]azy.nvim' })
 
 --~ Toggle line wrap
 vim.keymap.set('n', '<leader>w', function()
