@@ -37,7 +37,6 @@ vim.keymap.set('n', '<C-Right>', '<cmd>vertical resize +2<cr>', { desc = 'Increa
 
 --~ Manage plugins
 vim.keymap.set('n', '<leader>ml', '<cmd>Lazy<cr>', { desc = '[L]azy.nvim' })
-vim.keymap.set('n', '<leader>mm', '<cmd>Mason<cr>', { desc = '[L]azy.nvim' })
 
 --~ Toggle line wrap
 vim.keymap.set('n', '<leader>w', function()

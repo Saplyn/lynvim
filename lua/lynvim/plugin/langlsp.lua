@@ -73,6 +73,9 @@ return {
 
       -- Rust
       rust_analyzer = {
+        on_attach = function(_, bufnr)
+          vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+        end,
         init_options = {
           check = {
             command = 'clippy',
@@ -163,5 +166,8 @@ return {
         end,
       },
     }
+
+    -- Manage keymap setup
+    vim.keymap.set('n', '<leader>mm', '<cmd>Mason<cr>', { desc = '[L]azy.nvim' })
   end,
 }
