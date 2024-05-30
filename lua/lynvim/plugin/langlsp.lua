@@ -72,7 +72,11 @@ return {
       -- pyright = {},
 
       -- Rust
-      rust_analyzer = {},
+      rust_analyzer = {
+        checkOnSave = {
+          command = 'clippy',
+        },
+      },
 
       -- TOML
       taplo = {},
