@@ -1,4 +1,3 @@
--- TODO: remap key bingding
 --~ Keybinding cheatsheet
 return {
   'folke/which-key.nvim',
@@ -12,6 +11,7 @@ return {
       ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
       ['<leader>x'] = { name = '[X] Trouble', _ = 'which_key_ignore' },
       ['<leader>q'] = { name = '[Q] Session', _ = 'which_key_ignore' },
+      ['<leader>m'] = { name = '[M]anage Plugin', _ = 'which_key_ignore' },
     }
   end,
 }
