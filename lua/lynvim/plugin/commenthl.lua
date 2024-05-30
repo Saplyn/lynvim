@@ -18,10 +18,18 @@ return {
       end,
     },
   },
-  opts = {
-    signs = false,
-    keywords = {
-      TODO = { icon = '󱅫 ', signs = true },
-    },
-  },
+  config = function()
+    require('todo-comments').setup {
+      signs = false,
+      keywords = {
+        FIX = { signs = true },
+        WARN = { icon = '󱇎 ', signs = true },
+        TODO = { icon = '󱅫 ', color = 'info', signs = true },
+        LYN = { icon = '󰄛 ', color = 'hint', signs = true },
+        NOTE = { icon = ' ', signs = true },
+      },
+    }
+
+    vim.keymap.set('n', '<leader>st', '<cmd>TodoTelescope<cr>', { desc = '[S]earch [T]odo' })
+  end,
 }
