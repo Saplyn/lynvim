@@ -1,3 +1,11 @@
+local function copilot_status()
+  if vim.g.copilot_enabled == 1 then
+    return ' '
+  else
+    return ' '
+  end
+end
+
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -25,7 +33,7 @@ return {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff' },
         lualine_c = { 'filename', 'diagnostics' },
-        lualine_x = { 'encoding' },
+        lualine_x = { 'encoding', copilot_status },
         lualine_y = { 'filetype' },
         lualine_z = { 'location' },
       },
