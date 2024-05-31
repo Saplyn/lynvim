@@ -49,7 +49,6 @@ return {
         ['<C-b>'] = cmp.mapping.scroll_docs(-4), -- Sroll doc [b]ack
         ['<C-f>'] = cmp.mapping.scroll_docs(4), -- Sroll doc [f]orward
 
-        ['<tab>'] = cmp.mapping.confirm { select = true }, -- Accept completion
         ['<C-y>'] = cmp.mapping.confirm { select = true }, -- Accept ([y]es) completion
 
         ['<C-Space>'] = cmp.mapping.complete {}, -- Manually trigger completion
