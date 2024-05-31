@@ -12,6 +12,7 @@ return {
       ['<leader>x'] = { name = '[X] Trouble', _ = 'which_key_ignore' },
       ['<leader>q'] = { name = '[Q] Session', _ = 'which_key_ignore' },
       ['<leader>m'] = { name = '[M]anage Plugin', _ = 'which_key_ignore' },
+      ['<leader>h'] = { name = '[H] Copilot', _ = 'which_key_ignore' },
     }
   end,
 }
