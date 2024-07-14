@@ -27,6 +27,7 @@ vim.keymap.set('v', '<A-k>', ":m '<-2<cr>gv=gv", { desc = 'Move Line Up' })
 
 --~ Quality of life
 vim.keymap.set('v', '<leader>p', [["_dP]], { desc = 'Lossless [P]aste' })
+vim.keymap.set('v', '<leader>d', [["_d]], { desc = 'Yankles [D]elete' })
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<cr>', { desc = '[Q]uit All' })
 
 --~ Resize window
