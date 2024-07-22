@@ -168,6 +168,6 @@ return {
     }
 
     -- Manage keymap setup
-    vim.keymap.set('n', '<leader>mm', '<cmd>Mason<cr>', { desc = '[L]azy.nvim' })
+    vim.keymap.set('n', '<leader>mm', '<cmd>Mason<cr>', { desc = '[M]ason.nvim' })
   end,
 }
