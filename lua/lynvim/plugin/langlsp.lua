@@ -115,6 +115,9 @@ return {
       -- Shell
       bashls = {},
 
+      -- Haskell
+      hls = {},
+
       -- Lua
       lua_ls = {
         -- cmd = {...},
